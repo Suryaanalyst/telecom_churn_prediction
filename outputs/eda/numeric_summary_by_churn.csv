@@ -1,0 +1,4 @@
+churn_status,tenure_months,monthly_charges,support_tickets_3m,late_payments_6m
+Churned,28.83,77.87,1.67,1.03
+Retained,39.83,70.61,1.33,0.73
+
