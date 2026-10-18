@@ -31,3 +31,4 @@ contract-level analysis, customer search, filters, and CSV export.
 - Retention ROI depends on assumptions about campaign cost and
   customer contribution.
 - Real-world use requires representative data and proper model validation.
+
