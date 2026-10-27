@@ -1,0 +1,21 @@
+feature,mean_absolute_shap
+tenure_months,0.05610802586141896
+contract_type_Month-to-month,0.05414620274449117
+internet_service_Fiber optic,0.032993772258798
+average_monthly_spend,0.0313146392007758
+total_charges,0.027574427010956318
+monthly_charges,0.025213023738368937
+support_tickets_3m,0.023077495153864428
+late_payments_6m,0.018600926199095567
+internet_service_DSL,0.017789896059835535
+frequent_late_payments,0.015262330770279433
+contract_type_One year,0.014730381842619523
+short_tenure,0.012854516685177949
+payment_method_Electronic check,0.008654408730439453
+contract_type_Two year,0.0076586430174517715
+payment_method_Credit card,0.007477158224777665
+monthly_data_gb,0.0071128598795494385
+internet_service_No internet,0.005527394148985409
+high_support_usage,0.005112434671366676
+senior_citizen,0.0033615198883222993
+payment_method_Bank transfer,0.0019072225752080048

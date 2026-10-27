@@ -37,7 +37,7 @@ if missing_files:
 
 
 # 4. Load data
-@st.cache_data
+@st.cache_data(ttl="15m", max_entries=4)
 def load_data():
     customers = pd.read_csv(CUSTOMERS_FILE)
     risks = pd.read_csv(RISK_FILE)
@@ -176,7 +176,7 @@ with left:
         text="Customers",
     )
     fig_risk.update_layout(showlegend=False)
-    st.plotly_chart(fig_risk, use_container_width=True)
+    st.plotly_chart(fig_risk, width="stretch")
 
 with right:
     fig_probability = px.histogram(
@@ -187,7 +187,7 @@ with right:
         labels={"churn_probability": "Predicted Churn Probability"},
     )
     fig_probability.update_layout(xaxis_tickformat=".0%")
-    st.plotly_chart(fig_probability, use_container_width=True)
+    st.plotly_chart(fig_probability, width="stretch")
 
 # 8. Contract analysis
 st.subheader("Churn by Contract Type")
@@ -216,14 +216,13 @@ fig_contract = px.bar(
     },
 )
 fig_contract.update_layout(yaxis_tickformat=".0%")
-st.plotly_chart(fig_contract, use_container_width=True)
+st.plotly_chart(fig_contract, width="stretch")
 
 st.dataframe(
     contract_summary.style.format({
         "observed_churn_rate": "{:.1%}",
         "average_predicted_probability": "{:.1%}",
     }),
-    use_container_width=True,
     hide_index=True,
 )
 
@@ -255,7 +254,6 @@ st.dataframe(
         "monthly_charges": "₹{:.2f}",
         "churn_probability": "{:.1%}",
     }),
-    use_container_width=True,
     hide_index=True,
 )
 
@@ -273,7 +271,7 @@ if (
     not segments.empty
     and {"risk_category", "customers"}.issubset(segments.columns)
 ):
-    st.dataframe(segments, use_container_width=True, hide_index=True)
+    st.dataframe(segments, hide_index=True)
 else:
     st.info(
         "Business impact report not found. Run Phase 8 to generate the report."

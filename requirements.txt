@@ -4,4 +4,8 @@ numpy
 scikit-learn
 matplotlib
 seaborn
+shap
+SQLAlchemy
+psycopg[binary]
+pytest
 

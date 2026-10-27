@@ -27,6 +27,9 @@ business impact analysis, and an interactive Streamlit dashboard.
 - Plotly
 - Streamlit
 - Joblib
+- PostgreSQL and SQL (schema, views, CTEs, and window functions)
+- SHAP
+- Pytest
 
 ## Project Structure
 
@@ -53,17 +56,17 @@ telecom-churn-prediction/
 4. Engineer features.
 5. Train a baseline model.
 6. Compare machine learning models.
-7. Generate customer churn risk predictions.
-8. Estimate business impact and retention scenarios.
-9. Explore results using a Streamlit dashboard.
-10. Document and prepare the project for sharing.
+7. Tune the selected model with stratified cross-validation and evaluate it once on a held-out test set.
+8. Generate SHAP explainability artifacts and customer churn risk predictions.
+9. Estimate business impact and retention scenarios.
+10. Explore results using a Streamlit dashboard or PostgreSQL/Power BI.
 
 ## Key Project Results
 
 - Customers analyzed: 1,000
-- High-risk customers identified: 129
-- Medium-risk customers identified: 353
-- Low-risk customers identified: 518
+- High-risk customers identified: 131
+- Medium-risk customers identified: 380
+- Low-risk customers identified: 489
 
 The above figures are from the current synthetic project dataset.
 
@@ -90,8 +93,10 @@ This project uses synthetic customer data for educational and portfolio
 purposes. Revenue-at-risk figures and retention ROI scenarios are
 estimates based on assumptions, not guaranteed business outcomes.
 
-Model performance should be evaluated using appropriate validation
-data before real-world deployment.
+The current tuned-model holdout evaluation and cross-validation results are
+saved in `reports/metrics/`; they are generated from the synthetic dataset and
+must not be represented as real-world production performance. See
+`docs/deployment.md` for verified local workflow and deployment preparation.
 
 ## Author
 

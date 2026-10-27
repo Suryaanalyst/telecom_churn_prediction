@@ -1,23 +1,5 @@
-
 .venv/
-venv/
 __pycache__/
-*.py[cod]
-.ipynb_checkpoints/
-.env
+.pytest_cache/
 .streamlit/secrets.toml
-
-# Generated Python artifacts
-*.joblib
-*.pkl
-
-# Keep generated project data and reports out of Git if desired
-# Uncomment the next lines if you do not want to upload these files:
-# data/*.csv
-# reports/**/*.csv
-# reports/**/*.png
-
-# Editor and operating-system files
-.vscode/
-.DS_Store
-Thumbs.db
+*.py[cod]
